@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
 import Button from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
 import TimeInput from "../generic/TimeInput";
+
+
+const TimeInputWithLabel = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 class Countdown extends React.Component {
   render() {
@@ -10,12 +17,14 @@ class Countdown extends React.Component {
       <React.Fragment>
         <h1>Countdown</h1>
         <DisplayTime />
-        <div>
+        <TimeInputWithLabel>
           Start Time:
           <TimeInput />
+        </TimeInputWithLabel>
+        <div>
+          <Button>START</Button>
+          <Button variant="secondary">RESET</Button>
         </div>
-        <Button>START</Button>
-        <Button>RESET</Button>
       </React.Fragment>
     );
   }

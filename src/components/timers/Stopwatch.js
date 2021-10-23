@@ -9,8 +9,10 @@ class Stopwatch extends React.Component {
       <React.Fragment>
         <h1>Stopwatch</h1>
         <DisplayTime />
-        <Button>START</Button>
-        <Button>RESET</Button>
+        <div>
+          <Button>START</Button>
+          <Button variant="secondary">RESET</Button>
+        </div>
       </React.Fragment>
     );
   }

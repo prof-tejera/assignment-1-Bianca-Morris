@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Time = styled.div`
-    font-size: 100px;
+    font-size: 72px;
 `;
 
 class DisplayTime extends React.Component {

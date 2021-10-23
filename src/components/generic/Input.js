@@ -5,6 +5,17 @@ import PropTypes from "prop-types";
 
 const HiddenLabel = styled.label`display:none;`;
 
+const StyledInput = styled.input`
+    background-color: #ffffff;
+    border: none;
+    width: 40px;
+    padding: 5px;
+
+    ::placeholder {
+        color: #459Fd3;
+        font-size: 20px;
+    }
+`;
 
 class Input extends React.Component {
   render() {
@@ -12,7 +23,7 @@ class Input extends React.Component {
     return (
         <React.Fragment>
             <HiddenLabel {...{ name }} ></HiddenLabel>
-            <input {...{ name, type, onChange, disabled, placeholder, value }} />
+            <StyledInput {...{ name, type, onChange, disabled, placeholder, value }} />
         </React.Fragment>
     );
   }
