@@ -7,7 +7,7 @@ import TimeInput from "../generic/TimeInput";
 class Countdown extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Countdown</h1>
         <DisplayTime />
         <div>
@@ -16,7 +16,7 @@ class Countdown extends React.Component {
         </div>
         <Button>START</Button>
         <Button>RESET</Button>
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -6,12 +6,12 @@ import DisplayTime from "../generic/DisplayTime";
 class Stopwatch extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Stopwatch</h1>
         <DisplayTime />
         <Button>START</Button>
         <Button>RESET</Button>
-      </div>
+      </React.Fragment>
     );
   }
 }

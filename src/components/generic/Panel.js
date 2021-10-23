@@ -13,12 +13,17 @@ const ImageBackgroundPane = styled.div`
 `;
 
 const InnerPane = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
     flex-shrink: 0;
     border-radius: 20px;
     border: 4px dotted #FFFFFF;
     height: 380px;
     width: 100%;
+    color: #ffffff;
+    padding: 30px 60px;
 `;
 
 

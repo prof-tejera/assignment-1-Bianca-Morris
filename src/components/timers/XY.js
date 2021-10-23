@@ -9,7 +9,7 @@ import Input from "../generic/Input";
 class XY extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>XY</h1>
         <DisplayRounds />
         <DisplayTime />
@@ -23,7 +23,7 @@ class XY extends React.Component {
         </div>
         <Button>START</Button>
         <Button>RESET</Button>
-      </div>
+      </React.Fragment>
     );
   }
 }

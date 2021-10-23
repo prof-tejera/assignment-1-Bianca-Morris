@@ -9,7 +9,7 @@ import Input from "../generic/Input";
 class Tabata extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Tabata</h1>
         <DisplayRounds currRound={0} totalRounds={1}/>
         <DisplayTime />
@@ -27,7 +27,7 @@ class Tabata extends React.Component {
         </div>
         <Button>START</Button>
         <Button>RESET</Button>
-      </div>
+      </React.Fragment>
     );
   }
 }

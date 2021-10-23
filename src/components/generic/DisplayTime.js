@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+const Time = styled.div`
+    font-size: 100px;
+`;
+
 class DisplayTime extends React.Component {
   static transformToDisplayString(number) {
     let numString = number.toString();
@@ -17,11 +21,11 @@ class DisplayTime extends React.Component {
   render() {
     const { hours, minutes, seconds } = this.props;
     return (
-        <div>
+        <Time>
             {DisplayTime.transformToDisplayString(hours)}:
             {DisplayTime.transformToDisplayString(minutes)}:
             {DisplayTime.transformToDisplayString(seconds)}
-        </div>
+        </Time>
     );
   }
 }
