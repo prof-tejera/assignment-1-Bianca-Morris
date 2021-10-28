@@ -69,7 +69,9 @@ Resources used:
 - Font installation help from https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects
 - Fonts from Google Fonts (Bubblegum Sans, Source Code Pro, Lobster)
 - Image from Unsplash
+- Used Coolors.io to generate & fine-tune color scheme
 - Referred to an article from my Design Systems class while thinking through how to handle reuse of design tokens and theming: https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421
+- Vaguely inspired by the Miami Vice box art...
 
 Note: I'm aware that currently, some of the proptypes don't 100% make sense; I'm still trying to decide how
 I want to go about making this functional, so that stuff is very much WIP. I know TimeInput specifically is one
