@@ -11,28 +11,57 @@ const Container = styled.div`
   overflow: auto;
 `;
 
+const Nav = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+
+`;
+
+const NavItem = styled.li`
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  
+  >a {
+    color: #ffffff;
+    :hover {
+      color: #dedede;
+    }
+  }
+`;
+
+const ViewCenterer = styled.div`
+  display: flex;
+  height: calc(100% - 40px);
+  justify-content: center;
+`;
+
 function App() {
   return (
     <Container>
       <Router>
         <nav>
-          <ul>
-            <li>
+          <Nav>
+            <NavItem>
               <Link to="/">Timers</Link>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <Link to="/docs">Documentation</Link>
-            </li>
-          </ul>
+            </NavItem>
+          </Nav>
         </nav>
-        <Switch>
-          <Route path="/docs">
-            <DocumentationView />
-          </Route>
-          <Route path="/">
-            <TimersView />
-          </Route>
-        </Switch>
+        <ViewCenterer>
+          <Switch>
+            <Route path="/docs">
+              <DocumentationView />
+            </Route>
+            <Route path="/">
+              <TimersView />
+            </Route>
+          </Switch>
+        </ViewCenterer>
       </Router>
     </Container>
   );

@@ -19,6 +19,8 @@ const Container = styled.div`
 
 const Title = styled.div`
   font-size: 2rem;
+  margin-top: 25px;
+  font-family: Lobster;
 `;
 
 const Documentation = () => {
@@ -169,7 +171,7 @@ const Documentation = () => {
         />
         <DocumentComponent
           title="Panel "
-          component={<Panel />}
+          component={<Panel children={<div/>}/>}
           propDocs={[
             {        
               prop: "children",
@@ -181,7 +183,7 @@ const Documentation = () => {
         />
         <DocumentComponent
           title="TimeInput "
-          component={<TimeInput />}
+          component={<TimeInput onChange={() => console.log("timeinput")}/>}
           propDocs={[
             {
               prop: "hoursVal",

@@ -17,6 +17,7 @@ const Title = styled.div`
   justify-content: center;
   padding-top: 20px;
   font-size: 1.3rem;
+  font-family: BubblegumSans;
 `;
 
 const RenderComponent = styled.div`
