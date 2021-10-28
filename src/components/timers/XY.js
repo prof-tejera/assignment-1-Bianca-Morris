@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { H1 } from "../../utils/tokensAndTheme";
 import Button from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
 import DisplayRounds from "../generic/DisplayRounds";
@@ -17,7 +18,7 @@ class XY extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>XY</h1>
+        <H1>XY</H1>
         <DisplayRounds />
         <DisplayTime />
         <TimeInputWithLabel>

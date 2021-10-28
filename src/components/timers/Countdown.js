@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import { H1 } from "../../utils/tokensAndTheme";
 import Button from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
 import TimeInput from "../generic/TimeInput";
@@ -15,7 +16,7 @@ class Countdown extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Countdown</h1>
+        <H1>Countdown</H1>
         <DisplayTime />
         <TimeInputWithLabel>
           Start Time:

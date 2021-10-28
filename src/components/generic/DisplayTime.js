@@ -4,7 +4,8 @@ import { transformTimeUnitToDisplayString } from "../../utils/helpers";
 import { globalPropTypes } from "../../utils/globalPropTypes";
 
 const Time = styled.div`
-    font-size: 72px;
+    font-size: 4em;
+    font-family: 'SourceCodePro';
 `;
 
 class DisplayTime extends React.Component {

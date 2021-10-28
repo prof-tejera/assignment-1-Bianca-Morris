@@ -10,6 +10,7 @@ const StyledInput = styled.input`
     border: none;
     width: 40px;
     padding: 5px;
+    border-radius: 3px;
 
     ::placeholder {
         color: ${themeColors.inputPlaceholder};

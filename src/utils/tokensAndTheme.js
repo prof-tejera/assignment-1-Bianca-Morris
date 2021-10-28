@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 // Raw color values (HEX)
 export const colorTokens = {
     babyBlueLight: "#61cbf5", 
@@ -44,3 +46,9 @@ export const themeColors = {
     timerBgGradient1: specialColorTokens.babyBlueLight,
     timerBgGradient2: specialColorTokens.purpleMedium
 };
+
+// Shared Basic Typography Styles
+export const H1 = styled.div`
+    font-family: Lobster;
+    font-size: 2rem;
+`;

@@ -17,6 +17,7 @@ const InnerPane = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     flex-shrink: 0;
     border-radius: 20px;
@@ -24,7 +25,6 @@ const InnerPane = styled.div`
     height: 380px;
     width: 100%;
     color: ${themeColors.textLight};
-    padding: 30px 60px;
 `;
 
 
