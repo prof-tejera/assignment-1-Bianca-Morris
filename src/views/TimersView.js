@@ -7,6 +7,8 @@ import Countdown from "../components/timers/Countdown";
 import XY from "../components/timers/XY";
 import Tabata from "../components/timers/Tabata";
 
+import { themeColors } from "../utils/tokensAndTheme";
+
 const Timers = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,22 +23,15 @@ const TimerSelector = styled.div`
   width: 250px;
   height: 350px;
   justify-content: center;
-  background: linear-gradient(143deg, #617cb7 0%, rgb(35, 48, 77) 100%);
+  background: linear-gradient(143deg, ${themeColors.timerSelectorGradient1} 0%, ${themeColors.timerSelectorGradient2} 100%);
   overflow: visible;
   border-radius: 20px 0 0 20px;
   padding: 30px;
 `;
 
-const Timer = styled.div`
-  border: 1px solid gray;
-  padding: 20px;
-  margin: 10px;
-  font-size: 1.5rem;
-`;
-
 const TimerTitle = styled.div`
-  background-color: #2b3254;
-  color: #459fd3;
+  background-color: ${themeColors.timerSwitchTitle};
+  color: ${themeColors.textMedium};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,8 +44,8 @@ const TimerTitle = styled.div`
 `;
 
 const ActiveTimerTitle = styled(TimerTitle)`
-  background-color: #61cbf5;
-  color: #ffffff;
+  background-color: ${themeColors.timerSwitchTitleActive};
+  color: ${themeColors.textLight};
 `;
 
 function App() {

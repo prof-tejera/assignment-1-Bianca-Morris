@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+
+import { globalPropTypes } from "../../utils/globalPropTypes";
 import Input from "../generic/Input";
 
 const TimeInputWrapper = styled.div`
@@ -9,17 +11,28 @@ const TimeInputWrapper = styled.div`
     margin: 10px 5px;
 `;
 
-class TimeInput extends React.Component {
-    render() {
-        const { hoursVal, minutesVal, secondsVal } = this.props;
-        return (
-            <TimeInputWrapper>
-                <Input placeholder="HH" value={hoursVal} />
-                <Input placeholder="MM" value={minutesVal} />
-                <Input placeholder="SS" value={secondsVal} />
-            </TimeInputWrapper>
-        )
-    }
+const TimeInput = (props) => {
+    const { disabled, hoursVal, minutesVal, secondsVal } = props;
+    return (
+        <TimeInputWrapper>
+            <Input placeholder="HH" value={hoursVal} type="number" name="hourInput" {...{ disabled }} />
+            <Input placeholder="MM" value={minutesVal} type="number" name="minuteInput" {...{ disabled }} />
+            <Input placeholder="SS" value={secondsVal} type="number" name="secondInput" {...{ disabled }} />
+        </TimeInputWrapper>
+    )
+}
+TimeInput.propTypes = {
+    hoursVal: globalPropTypes.hours,
+    minutesVal: globalPropTypes.minutes,
+    secondsVal: globalPropTypes.seconds,
+    onChange: globalPropTypes.onChange.isRequired,
+    disabled: globalPropTypes.disabled
+}
+TimeInput.defaultProps = {
+    disabled: false,
+    hoursVal: null,
+    minutesVal: null,
+    secondsVal: null
 }
 
 export default TimeInput;

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { globalPropTypes } from "../../utils/globalPropTypes";
 
 
 class DisplayRounds extends React.Component {
@@ -15,9 +15,9 @@ class DisplayRounds extends React.Component {
   }
 }
 DisplayRounds.propTypes = {
-    totalRounds: PropTypes.number,
-    currRound: PropTypes.number,
-    isRest: PropTypes.bool
+    totalRounds: globalPropTypes.totalRounds,
+    currRound: globalPropTypes.currRound,
+    isRest: globalPropTypes.isRest
 }
 DisplayRounds.defaultProps = {
     totalRounds: 0,

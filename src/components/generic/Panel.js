@@ -1,9 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
+import { themeColors } from "./../../utils/tokensAndTheme";
+import { globalPropTypes } from "../../utils/globalPropTypes";
 
 const ImageBackgroundPane = styled.div`
-    background: linear-gradient(120deg,rgba(143,229,255,0.9),rgba(0,20,168,0.78)),url("/maarten-van-den-heuvel-unsplash-sm.jpg");
+    background: linear-gradient(120deg,${themeColors.timerBgGradient1},${themeColors.timerBgGradient2}),url("/maarten-van-den-heuvel-unsplash-sm.jpg");
     height: 390px;
     width: 550px;
     border-radius: 0 20px 20px 0;
@@ -22,7 +23,7 @@ const InnerPane = styled.div`
     border: 4px dotted #FFFFFF;
     height: 380px;
     width: 100%;
-    color: #ffffff;
+    color: ${themeColors.textLight};
     padding: 30px 60px;
 `;
 
@@ -40,6 +41,9 @@ class Panel extends React.Component {
         );
     }
     
+}
+Panel.propTypes = {
+    children: globalPropTypes.children.isRequired,
 }
 
 export default Panel;

@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-
+import { themeColors } from "../../utils/tokensAndTheme";
+import { globalPropTypes } from "../../utils/globalPropTypes";
 
 const HiddenLabel = styled.label`display:none;`;
 
 const StyledInput = styled.input`
-    background-color: #ffffff;
+    background-color: ${themeColors.inputBackground};
     border: none;
     width: 40px;
     padding: 5px;
 
     ::placeholder {
-        color: #459Fd3;
+        color: ${themeColors.inputPlaceholder};
         font-size: 20px;
     }
 `;
@@ -29,15 +29,12 @@ class Input extends React.Component {
   }
 }
 Input.propTypes = {
-    type: PropTypes.oneOf(["text", "number", "submit"]),
-    placeholder: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
-    value: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ])
+    name: globalPropTypes.name.isRequired,
+    onChange: globalPropTypes.onChange.isRequired,
+    disabled: globalPropTypes.disabled,
+    placeholder: globalPropTypes.placeholder,
+    type: globalPropTypes.inputType,
+    value: globalPropTypes.inputValue
 }
 Input.defaultProps = {
     type: "text",

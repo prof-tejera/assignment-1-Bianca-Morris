@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+
+import { globalPropTypes } from "../../utils/globalPropTypes";
+import { themeColors } from "../../utils/tokensAndTheme";
 
 const BaseButton = styled.button`
-    color: #ffffff;
+    color: ${themeColors.textLight};
     border: none;
     padding: 10px 20px;
     font-size: 30px;
@@ -11,28 +13,24 @@ const BaseButton = styled.button`
 `;
 
 const ButtonPrimary = styled(BaseButton)`
-    background-color: #45D3AD;
-
+    background-color: ${themeColors.btnPrimary};
     :hover {
-        background-color: #419786;
+        background-color: ${themeColors.btnPrimaryHover};
     }
 `;
 
 const ButtonSecondary = styled(BaseButton)`
-    background-color: #E16BBD;
-
+    background-color: ${themeColors.btnSecondary};
     :hover {
-        background-color: #B64995;
+        background-color: ${themeColors.btnSecondaryHover};
     }
 `;
 
 const ButtonDanger = styled(BaseButton)`
-    background-color: #D34545;
-
+    background-color: ${themeColors.btnDanger};
     :hover {
-        background-color: #A42323;
+        background-color: ${themeColors.btnDangerHover};
     }
-
 `;
 
 class Button extends React.Component {
@@ -57,14 +55,11 @@ class Button extends React.Component {
     }
 }
 Button.propTypes = {
-    type: PropTypes.oneOf(["button", "submit", "reset"]),
-    onClick: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
-    variant: PropTypes.oneOf(["primary", "secondary", "danger"]),
-    children: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
-    ]).isRequired
+    variant: globalPropTypes.variant,
+    type: globalPropTypes.buttonType,
+    disabled: globalPropTypes.disabled,
+    children: globalPropTypes.children,
+    onClick: globalPropTypes.onClick.isRequired,
 }
 Button.defaultProps = {
     type: "button",

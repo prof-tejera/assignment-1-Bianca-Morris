@@ -1,38 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+import { transformTimeUnitToDisplayString } from "../../utils/helpers";
+import { globalPropTypes } from "../../utils/globalPropTypes";
 
 const Time = styled.div`
     font-size: 72px;
 `;
 
 class DisplayTime extends React.Component {
-  static transformToDisplayString(number) {
-    let numString = number.toString();
-
-    if (numString.length < 2) {
-      numString = "0" + numString;
-    } else if (numString.length >= 2) {
-      throw new Error ("invalid value for time segment")
-    }
-    
-    return numString;
-  }
   render() {
     const { hours, minutes, seconds } = this.props;
     return (
         <Time>
-            {DisplayTime.transformToDisplayString(hours)}:
-            {DisplayTime.transformToDisplayString(minutes)}:
-            {DisplayTime.transformToDisplayString(seconds)}
+            {transformTimeUnitToDisplayString(hours, "h")}:
+            {transformTimeUnitToDisplayString(minutes, "m")}:
+            {transformTimeUnitToDisplayString(seconds, "s")}
         </Time>
     );
   }
 }
 DisplayTime.propTypes = {
-    hours: PropTypes.number,
-    minutes: PropTypes.number,
-    seconds: PropTypes.number
+    hours: globalPropTypes.hours,
+    minutes: globalPropTypes.minutes,
+    seconds: globalPropTypes.seconds
 }
 DisplayTime.defaultProps = {
     hours: 0,
