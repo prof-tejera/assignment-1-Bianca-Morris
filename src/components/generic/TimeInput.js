@@ -4,9 +4,17 @@ import styled from "styled-components";
 import { globalPropTypes } from "../../utils/globalPropTypes";
 import Input from "../generic/Input";
 
+export const TimeInputLabel = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: BubblegumSans;
+  width: 100%;
+  justify-content: center;
+`;
+
 const TimeInputWrapper = styled.div`
     display: flex;
-    width: 160px;
+    width: 200px;
     justify-content: space-between;
     margin: 10px 5px;
 `;

@@ -8,9 +8,10 @@ const HiddenLabel = styled.label`display:none;`;
 const StyledInput = styled.input`
     background-color: ${themeColors.inputBackground};
     border: none;
-    width: 40px;
+    width: 50px;
     padding: 5px;
     border-radius: 3px;
+    font-family: SourceCodePro;
 
     ::placeholder {
         color: ${themeColors.inputPlaceholder};

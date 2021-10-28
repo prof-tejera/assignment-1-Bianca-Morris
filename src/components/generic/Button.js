@@ -4,12 +4,19 @@ import styled from "styled-components";
 import { globalPropTypes } from "../../utils/globalPropTypes";
 import { themeColors } from "../../utils/tokensAndTheme";
 
+export const ButtonSpacer = styled.div`
+    width: 300px;
+    justify-content: space-evenly;
+    display: flex;
+`;
+
 const BaseButton = styled.button`
     color: ${themeColors.textLight};
     border: none;
     padding: 10px 20px;
     font-size: 30px;
     font-weight: 700;
+    font-family: SourceCodePro;
 `;
 
 const ButtonPrimary = styled(BaseButton)`

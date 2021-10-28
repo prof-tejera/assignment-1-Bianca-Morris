@@ -1,7 +1,7 @@
 import React from "react";
 
 import { H1 } from "../../utils/tokensAndTheme";
-import Button from "../generic/Button";
+import Button, { ButtonSpacer } from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
 
 class Stopwatch extends React.Component {
@@ -10,10 +10,10 @@ class Stopwatch extends React.Component {
       <React.Fragment>
         <H1>Stopwatch</H1>
         <DisplayTime />
-        <div>
+        <ButtonSpacer>
           <Button>START</Button>
           <Button variant="secondary">RESET</Button>
-        </div>
+        </ButtonSpacer>
       </React.Fragment>
     );
   }

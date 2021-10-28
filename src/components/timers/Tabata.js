@@ -2,22 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { H1 } from "../../utils/tokensAndTheme";
-import Button from "../generic/Button";
+import Button, { ButtonSpacer } from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
-import DisplayRounds from "../generic/DisplayRounds";
-import TimeInput from "../generic/TimeInput";
+import DisplayRounds, { RoundsLabel } from "../generic/DisplayRounds";
+import TimeInput, { TimeInputLabel } from "../generic/TimeInput";
 import Input from "../generic/Input";
-
-const TimeInputWithLabel = styled.div`
-  display: flex;
-  align-items: center;
-  font-family: BubblegumSans;
-`;
-
-const RoundsWithLabel = styled.div`
-  font-family: BubblegumSans;
-  padding-left: 5px;
-`;
 
 const LessMarginH1 = styled(H1)`
   margin: 5px;
@@ -30,22 +19,22 @@ class Tabata extends React.Component {
         <LessMarginH1>Tabata</LessMarginH1>
         <DisplayRounds currRound={0} totalRounds={1}/>
         <DisplayTime />
-        <TimeInputWithLabel>
+        <TimeInputLabel>
           Work Time:
           <TimeInput />
-        </TimeInputWithLabel>
-        <TimeInputWithLabel>
+        </TimeInputLabel>
+        <TimeInputLabel>
           Rest Time:
           <TimeInput />
-        </TimeInputWithLabel>
-        <RoundsWithLabel>
+        </TimeInputLabel>
+        <RoundsLabel>
           # of Rounds:
           <Input placeholder="1" />
-        </RoundsWithLabel>
-        <div>
+        </RoundsLabel>
+        <ButtonSpacer>
           <Button>START</Button>
           <Button variant="secondary">RESET</Button>
-        </div>
+        </ButtonSpacer>
       </React.Fragment>
     );
   }

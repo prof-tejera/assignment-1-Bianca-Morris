@@ -2,15 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { H1 } from "../../utils/tokensAndTheme";
-import Button from "../generic/Button";
+import Button, { ButtonSpacer } from "../generic/Button";
 import DisplayTime from "../generic/DisplayTime";
-import TimeInput from "../generic/TimeInput";
+import TimeInput, { TimeInputLabel } from "../generic/TimeInput";
 
 
-const TimeInputWithLabel = styled.div`
-  display: flex;
-  align-items: center;
-`;
 
 class Countdown extends React.Component {
   render() {
@@ -18,14 +14,14 @@ class Countdown extends React.Component {
       <React.Fragment>
         <H1>Countdown</H1>
         <DisplayTime />
-        <TimeInputWithLabel>
+        <TimeInputLabel>
           Start Time:
           <TimeInput />
-        </TimeInputWithLabel>
-        <div>
+        </TimeInputLabel>
+        <ButtonSpacer>
           <Button>START</Button>
           <Button variant="secondary">RESET</Button>
-        </div>
+        </ButtonSpacer>
       </React.Fragment>
     );
   }
