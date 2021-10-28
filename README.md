@@ -77,3 +77,5 @@ Note: I'm aware that currently, some of the proptypes don't 100% make sense; I'm
 I want to go about making this functional, so that stuff is very much WIP. I know TimeInput specifically is one
 I'm trying to figure out how best to approach; thought about putting 3 separate functions for updating hours,
 minutes and seconds, for instance, but decided to leave a single onChange for now, since I'm pretty sure I can figure out a way to create a single reusable onChange that works for each of the 3 fields. (May regret that choice and revert back once I start implementing.)
+
+https://prof-tejera.github.io/assignment-1-Bianca-Morris
