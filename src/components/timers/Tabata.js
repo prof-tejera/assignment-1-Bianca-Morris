@@ -13,6 +13,26 @@ const LessMarginH1 = styled(H1)`
 `;
 
 class Tabata extends React.Component {
+  onStart = () => {
+    console.log("Clicked Start!");
+  }
+
+  onReset = () => {
+    console.log("Clicked Reset!");
+  }
+
+  onInputWorkTime = (hours, minutes, seconds) => {
+    console.log("work time");
+  }
+
+  onInputRestTime = (hours, minutes, seconds) => {
+    console.log("rest time");
+  }
+
+  onInputRounds = (rounds) => {
+    console.log("rounds");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -21,19 +41,19 @@ class Tabata extends React.Component {
         <DisplayTime />
         <TimeInputLabel>
           Work Time:
-          <TimeInput />
+          <TimeInput onChange={this.onInputWorkTime} />
         </TimeInputLabel>
         <TimeInputLabel>
           Rest Time:
-          <TimeInput />
+          <TimeInput onChange={this.onInputRestTime}/>
         </TimeInputLabel>
         <RoundsLabel>
           # of Rounds:
-          <Input placeholder="1" />
+          <Input name="numRoundsTabata" placeholder="1" onChange={this.onInputRounds}/>
         </RoundsLabel>
         <ButtonSpacer>
-          <Button>START</Button>
-          <Button variant="secondary">RESET</Button>
+          <Button onClick={this.onStart}>START</Button>
+          <Button onClick={this.onReset} variant="secondary">RESET</Button>
         </ButtonSpacer>
       </React.Fragment>
     );

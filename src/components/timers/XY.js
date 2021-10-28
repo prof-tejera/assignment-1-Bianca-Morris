@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import { H1 } from "../../utils/tokensAndTheme";
 import Button, { ButtonSpacer } from "../generic/Button";
@@ -10,6 +9,22 @@ import Input from "../generic/Input";
 
 
 class XY extends React.Component {
+  onStart = () => {
+    console.log("Clicked Start!");
+  }
+
+  onReset = () => {
+    console.log("Clicked Reset!");
+  }
+
+  onInputStartTime = (hours, minutes, seconds) => {
+    console.log("start time");
+  }
+
+  onInputRounds = (rounds) => {
+    console.log("rounds");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -18,15 +33,15 @@ class XY extends React.Component {
         <DisplayTime />
         <TimeInputLabel>
           Start Time:
-          <TimeInput />
+          <TimeInput onChange={this.onInputStartTime}/>
         </TimeInputLabel>
         <RoundsLabel>
           # of Rounds:
-          <Input placeholder="1" />
+          <Input name="numRoundsXY" placeholder="1" onChange={this.onInputRounds}/>
         </RoundsLabel>
         <ButtonSpacer>
-          <Button>START</Button>
-          <Button variant="secondary">RESET</Button>
+          <Button onClick={this.onStart}>START</Button>
+          <Button onClick={this.onReset} variant="secondary">RESET</Button>
         </ButtonSpacer>
       </React.Fragment>
     );

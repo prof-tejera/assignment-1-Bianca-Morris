@@ -41,6 +41,7 @@ const TimerTitle = styled.div`
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
+  font-family: SourceCodePro;
 `;
 
 const ActiveTimerTitle = styled(TimerTitle)`
@@ -56,7 +57,7 @@ function App() {
     { title: "Tabata", C: <Tabata /> },
   ];
 
-  const [ timerIdx, setTimerIdx ] = React.useState(0);
+  const [ timerIdx, setTimerIdx ] = useState(0);
 
   return (
     <Timers>

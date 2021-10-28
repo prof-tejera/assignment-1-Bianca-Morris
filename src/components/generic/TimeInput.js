@@ -20,12 +20,12 @@ const TimeInputWrapper = styled.div`
 `;
 
 const TimeInput = (props) => {
-    const { disabled, hoursVal, minutesVal, secondsVal } = props;
+    const { disabled, hoursVal, minutesVal, secondsVal, onChange } = props;
     return (
         <TimeInputWrapper>
-            <Input placeholder="HH" value={hoursVal} type="number" name="hourInput" {...{ disabled }} />
-            <Input placeholder="MM" value={minutesVal} type="number" name="minuteInput" {...{ disabled }} />
-            <Input placeholder="SS" value={secondsVal} type="number" name="secondInput" {...{ disabled }} />
+            <Input placeholder="HH" value={hoursVal} type="number" name="hourInput" {...{ disabled, onChange }} />
+            <Input placeholder="MM" value={minutesVal} type="number" name="minuteInput" {...{ disabled, onChange }} />
+            <Input placeholder="SS" value={secondsVal} type="number" name="secondInput" {...{ disabled, onChange }} />
         </TimeInputWrapper>
     )
 }
@@ -38,9 +38,9 @@ TimeInput.propTypes = {
 }
 TimeInput.defaultProps = {
     disabled: false,
-    hoursVal: null,
-    minutesVal: null,
-    secondsVal: null
+    hoursVal: 0,
+    minutesVal: 0,
+    secondsVal: 0
 }
 
 export default TimeInput;

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import { H1 } from "../../utils/tokensAndTheme";
 import Button, { ButtonSpacer } from "../generic/Button";
@@ -9,6 +8,19 @@ import TimeInput, { TimeInputLabel } from "../generic/TimeInput";
 
 
 class Countdown extends React.Component {
+  onStart = () => {
+    console.log("Clicked Start!");
+  }
+
+  onReset = () => {
+    console.log("Clicked Reset!");
+  }
+
+  onInputStartTime = (hours, minutes, seconds) => {
+    // add functionality later
+    console.log("start time");
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -16,11 +28,11 @@ class Countdown extends React.Component {
         <DisplayTime />
         <TimeInputLabel>
           Start Time:
-          <TimeInput />
+          <TimeInput onChange={this.onInputStartTime}/>
         </TimeInputLabel>
         <ButtonSpacer>
-          <Button>START</Button>
-          <Button variant="secondary">RESET</Button>
+          <Button onClick={this.onStart}>START</Button>
+          <Button onClick={this.onReset} variant="secondary">RESET</Button>
         </ButtonSpacer>
       </React.Fragment>
     );
