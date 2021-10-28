@@ -16,8 +16,7 @@ class Countdown extends React.Component {
     console.log("Clicked Reset!");
   }
 
-  onInputStartTime = (hours, minutes, seconds) => {
-    // add functionality later
+  onInputStartTime = () => {
     console.log("start time");
   }
 

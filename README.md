@@ -62,3 +62,16 @@ npm start
 ```
 
 Assembled timers: `localhost:3000`. Documentation: `localhost:3000/docs`
+
+
+## Assignment Notes
+Resources used:
+- Font installation help from https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects
+- Fonts from Google Fonts (Bubblegum Sans, Source Code Pro, Lobster)
+- Image from Unsplash
+- Referred to an article from my Design Systems class while thinking through how to handle reuse of design tokens and theming: https://medium.com/eightshapes-llc/tokens-in-design-systems-25dd82d58421
+
+Note: I'm aware that currently, some of the proptypes don't 100% make sense; I'm still trying to decide how
+I want to go about making this functional, so that stuff is very much WIP. I know TimeInput specifically is one
+I'm trying to figure out how best to approach; thought about putting 3 separate functions for updating hours,
+minutes and seconds, for instance, but decided to leave a single onChange for now, since I'm pretty sure I can figure out a way to create a single reusable onChange that works for each of the 3 fields. (May regret that choice and revert back once I start implementing.)

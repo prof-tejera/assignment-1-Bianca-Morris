@@ -21,15 +21,15 @@ class Tabata extends React.Component {
     console.log("Clicked Reset!");
   }
 
-  onInputWorkTime = (hours, minutes, seconds) => {
+  onInputWorkTime = () => {
     console.log("work time");
   }
 
-  onInputRestTime = (hours, minutes, seconds) => {
+  onInputRestTime = () => {
     console.log("rest time");
   }
 
-  onInputRounds = (rounds) => {
+  onInputRounds = () => {
     console.log("rounds");
   }
 

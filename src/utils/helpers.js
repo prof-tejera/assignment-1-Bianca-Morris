@@ -1,4 +1,9 @@
 /**
+ * Only one helper function here currently; this will likely expand as I 
+ * work on making the timers functional.
+ */
+
+/**
  * Does some validation and transforms to 2 digit display string; throws error on invalid
  * @param {Number} number
  * @param {String} timeUnit

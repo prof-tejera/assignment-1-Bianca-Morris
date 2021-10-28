@@ -8,6 +8,8 @@ import Button from "../components/generic/Button";
 import Input from "../components/generic/Input";
 import DisplayTime from "../components/generic/DisplayTime";
 import DisplayRounds from "../components/generic/DisplayRounds";
+import Panel from "../components/generic/Panel";
+import TimeInput from "../components/generic/TimeInput";
 
 const Container = styled.div`
   display: flex;
@@ -63,7 +65,7 @@ const Documentation = () => {
             },
             {
               prop: "variant",
-              description: "One of: ('primary' | 'secondary' | 'success' | 'danger' | 'warning')",
+              description: "One of: ('primary' | 'secondary' | 'danger')",
               type: "string",
               defaultValue: "'primary'",
             },
@@ -141,7 +143,7 @@ const Documentation = () => {
             },
           ]}
         />
-          <DocumentComponent
+        <DocumentComponent
           title="Display Rounds "
           component={<DisplayRounds />}
           propDocs={[
@@ -163,6 +165,54 @@ const Documentation = () => {
               type: "boolean",
               defaultValue: "false",
             },
+          ]}
+        />
+        <DocumentComponent
+          title="Panel "
+          component={<Panel />}
+          propDocs={[
+            {        
+              prop: "children",
+              description: "React children to render inside of the panel",
+              type: "node or array of nodes",
+              defaultValue: "undefined",
+            },
+          ]}
+        />
+        <DocumentComponent
+          title="TimeInput "
+          component={<TimeInput />}
+          propDocs={[
+            {
+              prop: "hoursVal",
+              description: "A numeric representation of hours; max 2 digits",
+              type: "number",
+              defaultValue: "0",
+            },
+            {
+              prop: "minutesVal",
+              description: "A numeric representation of minutes; max 2 digits",
+              type: "number",
+              defaultValue: "0",
+            },
+            {
+              prop: "secondsVal",
+              description: "A numeric representation of seconds; max 2 digits",
+              type: "number",
+              defaultValue: "0",
+            },
+            {
+              prop: "disabled",
+              description: "Should the inputs be disabled or enabled?",
+              type: "boolean",
+              defaultValue: "false"
+            },
+            {
+              prop: "onChange",
+              description: "A single function to handle updates for hours, minutes and seconds",
+              type: "function",
+              defaultValue: "undefined"
+            }
           ]}
         />
       </div>

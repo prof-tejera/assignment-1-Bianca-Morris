@@ -17,11 +17,11 @@ class XY extends React.Component {
     console.log("Clicked Reset!");
   }
 
-  onInputStartTime = (hours, minutes, seconds) => {
+  onInputStartTime = () => {
     console.log("start time");
   }
 
-  onInputRounds = (rounds) => {
+  onInputRounds = () => {
     console.log("rounds");
   }
 

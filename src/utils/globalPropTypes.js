@@ -1,5 +1,11 @@
 import PropTypes from "prop-types";
 
+/**
+ * A centralized collection of all of the prop types used across
+ * the project. Will evolve as more features are added and things change;
+ * these are rough estimates of the types needed.
+ */
+
 export const globalPropTypes = {
     // Styling Props
     variant: PropTypes.oneOf(["primary", "secondary", "danger"]),
@@ -15,9 +21,6 @@ export const globalPropTypes = {
     placeholder: PropTypes.string,
     name: PropTypes.string,
     
-    
-    
-    
     // React Props
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
@@ -27,7 +30,6 @@ export const globalPropTypes = {
     // Event Handlers
     onClick: PropTypes.func,
     onChange: PropTypes.func,
-
 
     // Timer-Specific Props
     hours: PropTypes.number,

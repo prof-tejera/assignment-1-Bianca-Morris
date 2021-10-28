@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+/**
+ * This page consists of a bunch of design tokens like colors and typography choices
+ * that will be propagated across and reused throughout the app. Individual tokens may
+ * be used in various places throughout the app, so this is a centralized place
+ * for quickly editing and "remixing" them. If I had more typography, I'd build out
+ * a separate list of typography tokens, and then use those to build out some re-usable
+ * styled components for each major typography element. In that case I might also make
+ * more use of props to pass more information into a typography component re: styling.
+ */
+
 // Raw color values (HEX)
 export const colorTokens = {
     babyBlueLight: "#61cbf5", 
@@ -21,7 +31,7 @@ export const specialColorTokens = {
     purpleMedium: "rgba(0,20,168,0.8)"
 }
 
-// Values used across components for styling of specific areas
+// Values used across components for styling of specific areas & components
 export const themeColors = {
     // Buttons
     btnPrimary: colorTokens.tealLight,
