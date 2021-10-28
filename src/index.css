@@ -18,3 +18,19 @@ th {
   text-align: left;
   padding: 8px;
 }
+
+/* Google Fonts */
+@font-face {
+  font-family: 'BubblegumSans';
+  src: local('BubblegumSans'), url(./fonts/BubblegumSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: local('Lobster'), url(./fonts/Lobster-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceCodePro';
+  src: local('SourceCodePro'), url(./fonts/SourceCodePro-SemiBold.ttf) format('truetype');
+}
