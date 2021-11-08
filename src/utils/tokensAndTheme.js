@@ -11,7 +11,7 @@ import styled from "styled-components";
  */
 
 // Raw color values (HEX)
-export const colorTokens = {
+export const colorTokens = { 
     babyBlueLight: "#61cbf5", 
     babyBlue: "#459Fd3",
     pinkLight: "#E16BBD",
