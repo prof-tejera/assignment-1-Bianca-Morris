@@ -23,7 +23,7 @@ class Input extends React.Component {
   render() {
     const { type, name, onChange, disabled, placeholder, value } = this.props;
     return (
-        <React.Fragment>
+        <React.Fragment> 
             <HiddenLabel {...{ name }} ></HiddenLabel>
             <StyledInput {...{ name, type, onChange, disabled, placeholder, value }} />
         </React.Fragment>
